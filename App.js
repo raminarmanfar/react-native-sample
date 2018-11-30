@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import PresentationalComponent from "./components/PresentationalComponent";
 import List from "./components/List.js";
 import Inputs from "./components/Inputs.js";
@@ -7,6 +7,8 @@ import ScrollViewExample from "./components/ScrollView.js";
 import ImagesExample from "./components/ImageExample.js";
 import NetImagesExample from "./components/NetImageExample.js";
 import HttpExample from "./components/HttpExample.js";
+import ButtonsExample from "./components/ButtonsExample.js";
+import AnimationExample from "./components/AnimationExample.js";
 
 export default class App extends React.Component {
   state = {
@@ -20,6 +22,7 @@ export default class App extends React.Component {
       <View style={styles.mainContainer}>
         <ScrollView style={styles.scrollView1}>
           <HttpExample />
+          <AnimationExample />
           <NetImagesExample />
           <ImagesExample />
           <View>
@@ -36,8 +39,9 @@ export default class App extends React.Component {
           <List />
           <Inputs />
         </ScrollView>
-        <ScrollView>
+        <ScrollView style={styles.scrollView2}>
           <ScrollViewExample />
+          <ButtonsExample />
         </ScrollView>
       </View>
     );
@@ -49,7 +53,10 @@ const styles = StyleSheet.create({
     marginTop: 24
   },
   scrollView1: {
-    height: 600
+    height: "60%"
+  },
+  scrollView2: {
+    height: "40%"
   },
   container: {
     flexDirection: "column",
