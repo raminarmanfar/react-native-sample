@@ -6,6 +6,7 @@ import About from "./components/About.js";
 import WebViewExample from "./components/WebViewExample.js";
 import ModalExample from "./components/ModalExample.js";
 import ActivityIndicatorExample from "./components/ActivityIndicatorExample.js";
+import PickerExample from "./components/PickerExample.js";
 
 const Routes = () => (
   <Router>
@@ -20,6 +21,7 @@ const Routes = () => (
         component={ActivityIndicatorExample}
         title="Activity Indicator"
       />
+      <Scene key="picker" component={PickerExample} title="Picker" />
     </Scene>
   </Router>
 );

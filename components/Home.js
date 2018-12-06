@@ -1,6 +1,12 @@
 import React from "react";
 import { Actions } from "react-native-router-flux";
-import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+  StatusBar
+} from "react-native";
 
 export default class Home extends React.Component {
   updateState = () => this.setState({ myState: "The state is updated" });
@@ -8,6 +14,12 @@ export default class Home extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
+        <StatusBar
+          barStyle="light-content" // dark-content, default
+          hidden={false}
+          backgroundColor="#00BCD4"
+          translucent={true}
+        />
         <TouchableOpacity
           style={styles.btnContainer}
           onPress={() => Actions.mainPage()}
@@ -37,6 +49,12 @@ export default class Home extends React.Component {
           onPress={() => Actions.activityIndicator()}
         >
           <Text style={styles.btnText}>Activity Indicator</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btnContainer}
+          onPress={() => Actions.picker()}
+        >
+          <Text style={styles.btnText}>Picker</Text>
         </TouchableOpacity>
       </View>
     );
