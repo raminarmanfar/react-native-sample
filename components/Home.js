@@ -32,6 +32,12 @@ export default class Home extends React.Component {
         >
           <Text style={styles.btnText}>Modal</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btnContainer}
+          onPress={() => Actions.activityIndicator()}
+        >
+          <Text style={styles.btnText}>Activity Indicator</Text>
+        </TouchableOpacity>
       </View>
     );
   }
