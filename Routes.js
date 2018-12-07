@@ -7,6 +7,10 @@ import WebViewExample from "./components/WebViewExample.js";
 import ModalExample from "./components/ModalExample.js";
 import ActivityIndicatorExample from "./components/ActivityIndicatorExample.js";
 import PickerExample from "./components/PickerExample.js";
+import SwitchContainer from "./components/SwitchContainer.js";
+import TextExample from "./components/TextExample.js";
+import AlertExample from "./components/AlertExample.js";
+import GeolocationExample from "./components/AsyncStorageExample.js";
 
 const Routes = () => (
   <Router>
@@ -22,6 +26,14 @@ const Routes = () => (
         title="Activity Indicator"
       />
       <Scene key="picker" component={PickerExample} title="Picker" />
+      <Scene key="switchContainer" component={SwitchContainer} title="Switch" />
+      <Scene key="text" component={TextExample} title="Text" />
+      <Scene key="alert" component={AlertExample} title="Alert" />
+      <Scene
+        key="geolocation"
+        component={GeolocationExample}
+        title="Geolocation"
+      />
     </Scene>
   </Router>
 );
